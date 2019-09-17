@@ -1,0 +1,6 @@
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Core\bin\Debug\netcoreapp2.2\SPCLCTAPI.Core.deps.json
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Core\bin\Debug\netcoreapp2.2\SPCLCTAPI.Core.dll
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Core\obj\Debug\netcoreapp2.2\SPCLCTAPI.Core.csprojAssemblyReference.cache
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Core\obj\Debug\netcoreapp2.2\SPCLCTAPI.Core.csproj.CoreCompileInputs.cache
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Core\obj\Debug\netcoreapp2.2\SPCLCTAPI.Core.AssemblyInfoInputs.cache
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Core\obj\Debug\netcoreapp2.2\SPCLCTAPI.Core.AssemblyInfo.cs
