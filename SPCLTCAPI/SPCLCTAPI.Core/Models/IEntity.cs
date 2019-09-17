@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SPCLCTAPI.Core.Models
 {
-    public interface IEntity
+    public interface IEntity<TKey>
     {
         TKey Id { get; set; }
     }

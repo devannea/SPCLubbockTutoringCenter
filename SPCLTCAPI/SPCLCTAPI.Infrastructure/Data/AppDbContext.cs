@@ -1,9 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SPCLCTAPI.Core.Models;
 
 namespace SPCLCTAPI.Infrastructure.Data
 {
-    class AppDbContext : IndentityDbContext
+    class AppDbContext : IdentityDbContext
     {
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Timesheet> Timesheets { get; set; }

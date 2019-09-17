@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SPCLCTAPI.Core.Models;
 using SPCLCTAPI.Core.Services;
+using SPCLTCAPI.ApiModels;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -29,7 +30,7 @@ namespace SPCLTCAPI.Controllers
             try
             {
                 var profile = _profileService.Get(id);
-                var blogModels = profile.ToApiModel();
+                var profileModels = profile.ToApiModel();
                 return Ok(profileModels);
             }
             catch (Exception ex)

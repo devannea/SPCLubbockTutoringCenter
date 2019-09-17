@@ -1,7 +1,9 @@
-﻿using SPCLCTAPI.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using SPCLCTAPI.Core.Models;
 using SPCLCTAPI.Core.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace SPCLCTAPI.Infrastructure.Data
