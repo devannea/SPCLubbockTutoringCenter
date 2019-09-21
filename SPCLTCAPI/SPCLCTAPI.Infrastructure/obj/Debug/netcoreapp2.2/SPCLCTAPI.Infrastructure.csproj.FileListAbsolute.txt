@@ -3,3 +3,14 @@ C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.
 C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\obj\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\obj\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\obj\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.AssemblyInfo.cs
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.deps.json
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.runtimeconfig.json
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.runtimeconfig.dev.json
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.dll
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.pdb
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\SPCLCTAPI.Core.pdb
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\obj\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.csproj.CopyComplete
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\obj\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.dll
+C:\Users\devan\Documents\DevFolder\SPCLubbockTutoringCenter\SPCLTCAPI\SPCLCTAPI.Infrastructure\obj\Debug\netcoreapp2.2\SPCLCTAPI.Infrastructure.pdb
