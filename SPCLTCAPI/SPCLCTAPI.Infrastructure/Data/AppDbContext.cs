@@ -4,7 +4,7 @@ using SPCLCTAPI.Core.Models;
 
 namespace SPCLCTAPI.Infrastructure.Data
 {
-    class AppDbContext : IdentityDbContext
+    public class AppDbContext : IdentityDbContext
     {
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<Timesheet> Timesheets { get; set; }
@@ -15,9 +15,9 @@ namespace SPCLCTAPI.Infrastructure.Data
             base.OnModelCreating(builder);
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options)
         {
-            optionsBuilder.UseSqlite("DataSource=../SPCLCTAPI.Infrastructure/profile.db");
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SPCLCTAPI.Infrastructure.Data
 {
-    class TimesheetRepository : ITimesheetRepository
+    public class TimesheetRepository : ITimesheetRepository
     {
         private readonly AppDbContext _dbContext;
         public TimesheetRepository(AppDbContext dbContext)

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SPCLCTAPI.Infrastructure.Data
 {
-    class ProfileRepository : IProfileRepository
+    public class ProfileRepository : IProfileRepository
     {
         private readonly AppDbContext _dbContext;
 
@@ -38,6 +38,14 @@ namespace SPCLCTAPI.Infrastructure.Data
                  .Include(p => p.Timesheets)
                  .Include(p => p.User)
                  .SingleOrDefault(p => p.Id == id);
+        }
+
+        public IEnumerable<Profile> GetAllForUser(string userId)
+        {
+            return _dbContext.Profiles
+                .Include(p => p.User)
+                .Where(p => p.UserId == userId) // only for the given user
+                .ToList();
         }
 
         public Profile Update(Profile updatedProfile)

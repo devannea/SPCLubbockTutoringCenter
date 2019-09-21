@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -22,41 +23,47 @@ namespace SPCLTCAPI.Controllers
         {
             _profileService = profileService;
         }
-        // GET: api/profiles
-        [AllowAnonymous]
-        [HttpGet]
+        
+        // GET api/profile/id
+        [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            try
+            var profile = _profileService.Get(id);
+            if (profile == null) return NotFound();
+            // if the profile does not belong to the current user and the current user is not an admin
+            if (profile.UserId != CurrentUserId && !User.IsInRole("Admin"))
             {
-                var profile = _profileService.Get(id);
-                var profileModels = profile.ToApiModel();
-                return Ok(profileModels);
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("GetProfile", ex.Message);
+                ModelState.AddModelError("UserId", "You can only retrieve your own profile.");
                 return BadRequest(ModelState);
             }
+            return Ok(profile.ToApiModel());
         }
 
-        // GET api/profiles/{id}
-        [AllowAnonymous]
-        [HttpGet("{id}")]
+        // GET api/profiles
+        private string CurrentUserId
+        {
+            get
+            {
+                return User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            }
+        }
+        [HttpGet]
         public IActionResult Get()
         {
-            try
+            // if the user is an Admin, return all activities
+            if (User.IsInRole("Admin"))
             {
-                var profiles = _profileService.GetAll();
-                var profileModels = profiles.Select(p => p.ToApiModel());
-                return Ok(profileModels);
+                var allProfiles = _profileService
+                    .GetAll()
+                    .ToApiModels();
+                return Ok(allProfiles);
+            }
 
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("GetProfiles", ex.Message);
-                return BadRequest(ModelState);
-            }
+            // otherwise return only the user's activities
+            var profileModels = _profileService
+                .GetAllForUser(CurrentUserId)
+                .ToApiModels();
+            return Ok(profileModels);
         }
 
         // POST api/profiles
@@ -103,6 +110,16 @@ namespace SPCLTCAPI.Controllers
                 ModelState.AddModelError("DeleteProfile", ex.Message);
                 return BadRequest(ModelState);
             }
+        }
+
+        // DELETE /api/profiles
+        [Authorize(Roles = "Admin")]
+        [HttpDelete]
+        public IActionResult Delete()
+        {
+            // code to delete all profiles goes here...
+
+            return Ok("Deleted all profiles");
         }
     }
 }

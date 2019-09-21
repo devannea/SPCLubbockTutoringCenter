@@ -37,7 +37,6 @@ namespace SPCLTCAPI.Controllers
         [AllowAnonymous]
         public IActionResult Get(int profileId, int timesheetId)
         {
-            // TODO: replace the code below with the correct implementation
             var timesheets = _timesheetService.GetProfileTimesheets(profileId);
             var timesheet = timesheets.FirstOrDefault(t => t.Id == timesheetId);
             var timesheetModel = timesheet.ToApiModel();
@@ -91,6 +90,16 @@ namespace SPCLTCAPI.Controllers
                 ModelState.AddModelError("DeleteTimesheet", ex.Message);
                 return BadRequest(ModelState);
             }
+        }
+
+        // DELETE /api/timesheets
+        [Authorize(Roles = "Admin")]
+        [HttpDelete]
+        public IActionResult Delete()
+        {
+            // code to delete all timesheets goes here...
+
+            return Ok("Deleted all timesheets");
         }
     }
 }

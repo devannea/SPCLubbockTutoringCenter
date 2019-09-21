@@ -10,6 +10,7 @@ namespace SPCLCTAPI.Core.Services
         Profile Add(Profile newProfile);
         Profile Get(int id);
         IEnumerable<Profile> GetAll();
+        IEnumerable<Profile> GetAllForUser(string userId);
         Profile Update(Profile updatedProfile);
         void Remove(int id);
     }

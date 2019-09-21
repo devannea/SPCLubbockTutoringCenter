@@ -28,6 +28,11 @@ namespace SPCLCTAPI.Core.Services
             return _profileRepository.GetAll();
         }
 
+        public IEnumerable<Profile> GetAllForUser(string userId)
+        {
+            return _profileRepository.GetAllForUser(userId);
+        }
+
         public Profile Update(Profile updatedProfile)
         {
             return _profileRepository.Update(updatedProfile);

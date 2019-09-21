@@ -11,6 +11,7 @@ namespace SPCLCTAPI.Core.Services
         Profile Update(Profile profile);
         Profile Get(int id);
         IEnumerable<Profile> GetAll();
+        IEnumerable<Profile> GetAllForUser(string userId);
         void Remove(int id);
     }
 }
